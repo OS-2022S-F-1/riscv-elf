@@ -628,7 +628,7 @@ impl Elf {
         for i in 0..num_sections {
             // libc::c_char on different platform is defined differently
             // on riscv64gc-unknown-linux-gnu type c_char = u8
-            if unsafe { libc::strcmp(str as *const u8, self.get_section_name(i) as *const u8) }== 0 {
+            if unsafe { libc::strcmp(str as *const i8, self.get_section_name(i) as *const i8) }== 0 {
                 if let Some(ret) = id {
                     *ret = i;
                 }
