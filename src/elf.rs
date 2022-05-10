@@ -1,5 +1,5 @@
 extern crate libc;
-use std::mem::size_of;
+use core::mem::size_of;
 
 const ELFMAG: &str = "OELF";
 const SELFMAG: usize = 4;

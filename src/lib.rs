@@ -1,3 +1,4 @@
+#![no_std]
 mod elf;
 mod elf_file;
 

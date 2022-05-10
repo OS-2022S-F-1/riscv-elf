@@ -25,7 +25,7 @@ impl ElfFile {
             panic!("file does not exist - {}", filename);
         }
 
-        let mut stat: libc::stat = std::mem::zeroed();
+        let mut stat: libc::stat = core::mem::zeroed();
         let rc = libc::fstat(filep, &mut stat as *mut libc::stat);
 
         let file_size = if rc == 0 { stat.st_size } else { 0 } as usize;
